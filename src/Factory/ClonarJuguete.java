@@ -7,17 +7,18 @@ import Singleton.Juguete;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class ClonarJuguete implements Operacion{
     @Override
-    public void ejecutar(List<Juguete> juguetes) {
+    public void ejecutar(Set<Juguete> jugetes) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el ID del juguete a clonar: ");
         int id = scanner.nextInt();
 
         Juguete original = null;
 
-        for (Juguete juguete : juguetes) {
+        for (Juguete juguete : jugetes) {
             if (juguete.getId() == id) {
                 original = juguete;
                 break;
@@ -31,12 +32,12 @@ public class ClonarJuguete implements Operacion{
                 if (original instanceof Carrito){
                     Carrito copia = (Carrito) original;
                     for (int i = 0; i < cantidadClones; i++) {
-                        juguetes.add(copia.clonar());
+                        jugetes.add(copia.clonar());
                     }
                 } else if (original instanceof Peluche) {
                     Peluche copia = (Peluche) original;
                     for (int i = 0; i < cantidadClones; i++) {
-                        juguetes.add(copia.clonar());
+                        jugetes.add(copia.clonar());
                     }
                 }
             } catch (InputMismatchException e) {

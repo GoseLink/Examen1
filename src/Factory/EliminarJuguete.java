@@ -2,20 +2,22 @@ package Factory;
 
 import Singleton.Juguete;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class EliminarJuguete implements Operacion{
 
     @Override
-    public void ejecutar(List<Juguete> juguetes) {
+    public void ejecutar(Set<Juguete> jugetes) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el ID del juguete a eliminar: ");
         int id = scanner.nextInt();
 
         Juguete jugueteAEliminar = null;
 
-        for (Juguete juguete : juguetes) {
+        for (Juguete juguete : jugetes) {
             if (juguete.getId() == id) {
                 jugueteAEliminar = juguete;
                 break;
@@ -23,9 +25,10 @@ public class EliminarJuguete implements Operacion{
         }
 
         if (jugueteAEliminar != null) {
-            juguetes.remove(jugueteAEliminar);
-            for (int i = 0; i < juguetes.size(); i++){
-                juguetes.get(i).setId(i + 1);
+            jugetes.remove(jugueteAEliminar);
+            for (int i = 0; i < jugetes.size(); i++){
+                //jugetes.get(i).setId(i + 1);
+                new ArrayList<>(jugetes).get(i).setId(i + 1);
             }
             System.out.println("Juguete eliminado");
         } else {

@@ -2,10 +2,7 @@ package Singleton;
 
 import Factory.Operacion;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static Factory.Operacion.operaciones;
 
@@ -13,7 +10,7 @@ public class Menu {
 
     private static Menu instance;
 
-    public List<Juguete> jugetes = new ArrayList<>();
+    public Set<Juguete> jugetes = new LinkedHashSet<>();
     private Menu(){
 
     }

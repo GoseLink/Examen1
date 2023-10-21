@@ -14,16 +14,22 @@ public class Apoyo {
 
     public static int leerInt(String mensaje) {
         Scanner scanner = new Scanner(System.in);
-
-        while (true) {
+        int opcionSalida = 1;
+        int Salida = 0;
+        while (opcionSalida != 0) {
             try {
                 System.out.print("Ingrese " + mensaje + ": ");
-                return scanner.nextInt();
+                 Salida = scanner.nextInt();
+                 opcionSalida = 0;
+
             } catch (InputMismatchException e) {
                 System.out.println("Este campo solo recibe numeros");
                 scanner.nextLine();
+                opcionSalida = 1;
             }
         }
+
+        return Salida;
     }
 
 }
