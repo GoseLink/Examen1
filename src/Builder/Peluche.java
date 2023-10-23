@@ -5,14 +5,12 @@ import Singleton.Juguete;
 public class Peluche extends Juguete {
     private String materialExterior;
     private String relleno;
-    private String color;
 
     private Peluche(Builder builder) {
         this.materialExterior = builder.materialExterior;
         this.relleno = builder.relleno;
         this.color = builder.color;
     }
-
 
     // Métodos getter para los atributos
 

@@ -26,8 +26,12 @@ public class Menu {
         System.out.println("1. Crear Juguete");
         System.out.println("2. Clonar Juguete");
         System.out.println("3. Eliminar Juguete");
-        System.out.println("4. Ver Juguetes Actuales");
-        System.out.println("5. Salir");
+        System.out.println("4. Ver Todos Los Juguetes ");
+        System.out.println("5. Ver Jueguetes Filtrados");
+        System.out.println("6. Ver Carrito Con Mas Puertas");
+        System.out.println("7. Mapa De Juguetes");
+        System.out.println("8. Eliminar Por Colores");
+        System.out.println("9. Salir");
     }
 
     public void ejecutarOpcion(int opcion) {
@@ -44,6 +48,5 @@ public class Menu {
     public void agregarOperacion(int numeroOpcion, Operacion operacion) {
         operaciones.put(numeroOpcion, operacion);
     }
-
 
 }

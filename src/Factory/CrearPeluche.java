@@ -17,6 +17,4 @@ public class CrearPeluche implements Operacion{
                 .build();
         jugetes.add(peluche);
     }
-
-
 }

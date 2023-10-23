@@ -11,8 +11,6 @@ public interface Operacion {
 
     void ejecutar(Set<Juguete> jugetes);
 
-
-
     public Map<Integer, Operacion> operaciones = new HashMap<>();
 
     public default void agregarOperacion(int numeroOpcion, Operacion operacion) {

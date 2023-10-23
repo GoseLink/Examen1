@@ -3,7 +3,7 @@ package Builder;
 import Singleton.Juguete;
 
 public class Carrito extends Juguete {
-    private String color;
+
     private String marca;
     private int numeroPuertas;
 
@@ -51,4 +51,15 @@ public class Carrito extends Juguete {
         return " Color: " + color + ", Marca: " + marca + ", Número de Puertas: " + numeroPuertas ;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public int getNumeroPuertas() {
+        return numeroPuertas;
+    }
 }

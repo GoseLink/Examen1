@@ -17,6 +17,4 @@ public class CrearCarrito extends CrearJuguete implements Operacion {
             jugetes.add(carrito);
 
     }
-
-
 }

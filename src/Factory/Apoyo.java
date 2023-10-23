@@ -10,8 +10,6 @@ public class Apoyo {
         return scanner.nextLine();
     }
 
-
-
     public static int leerInt(String mensaje) {
         Scanner scanner = new Scanner(System.in);
         int opcionSalida = 1;

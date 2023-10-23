@@ -25,11 +25,12 @@ public class EliminarJuguete implements Operacion{
         }
 
         if (jugueteAEliminar != null) {
+            Juguete.decrementarContadorIDs();
             jugetes.remove(jugueteAEliminar);
             for (int i = 0; i < jugetes.size(); i++){
-                //jugetes.get(i).setId(i + 1);
                 new ArrayList<>(jugetes).get(i).setId(i + 1);
             }
+
             System.out.println("Juguete eliminado");
         } else {
             System.out.println("El juguete no existe");
